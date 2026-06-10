@@ -89,12 +89,6 @@ API_KEY = "TWOJ_KLUCZ_API"
 python gui.py
 ```
 
-### Uruchomienie aplikacji w konsoli:
-
-```bash
-python main.py
-```
-
 ---
 
 ## Plik wejściowy ips.txt
