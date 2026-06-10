@@ -63,7 +63,15 @@ cd shodan-parser
 
 ---
 
-### 2. Zainstaluj wymagania
+### 2. Utwórz środowisko
+
+```bash
+python -m venv .venv
+```
+
+---
+
+### 3. Zainstaluj wymagania
 
 ```bash
 pip install -r requirements.txt
