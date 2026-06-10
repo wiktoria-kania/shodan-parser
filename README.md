@@ -46,8 +46,8 @@ Celem projektu jest automatyczna analiza danych o usługach sieciowych oraz wykr
 
 - Python 3.x
 - requests
-- sqlite3 (wbudowane)
-- tkinter (wbudowane)
+- sqlite3 
+- tkinter
 - JSON
 
 ---
@@ -81,7 +81,7 @@ API_KEY = "TWOJ_KLUCZ_API"
 
 ---
 
-## ▶️ Uruchomienie
+## Uruchomienie
 
 ### Uruchomienie aplikacji GUI:
 
@@ -96,3 +96,13 @@ python main.py
 ```
 
 ---
+
+## Plik wejściowy ips.txt
+
+Plik input/ips.txt powinien zawierać adresy IP sformatowane w taki sposób:
+
+```txt
+8.8.8.8
+1.1.1.1
+...
+```
