@@ -92,8 +92,6 @@ def run_gui():
     
     tree.bind("<Double-1>", on_row_click)
 
-    load_data_to_tree(tree)
-
     root.mainloop()
 
 
