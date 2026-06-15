@@ -42,6 +42,56 @@ Celem projektu jest automatyczna analiza danych o usługach sieciowych oraz wykr
 
 ---
 
+## GUI
+
+Aplikacja posiada prosty interfejs graficzny stworzony w oparciu o bibliotekę Tkinter, który umożliwia obsługę parsera danych Shodan bez użycia terminala.
+
+### Funkcje GUI
+
+W interfejsie dostępne są następujące opcje:
+
+#### Skanowanie adresów IP
+
+Uruchamia proces skanowania adresów zapisanych w pliku input/ips.txt.
+
+#### Otwieranie plików wejściowych i wyjściowych
+
+- input/ips.txt – lista IP do skanowania
+- output/results.txt – zapisane wyniki skanowania
+  
+Pliki otwierane są bezpośrednio w Notatniku.
+
+#### Odświeżanie danych z bazy
+
+  Pobiera aktualne rekordy z bazy danych i wyświetla je w tabeli.
+
+#### Tabela wyników (TreeView)
+
+Interfejs zawiera tabelę prezentującą dane o zeskanowanych hostach, w tym:
+
+- ID rekordu
+- datę skanu
+- adres IP
+- porty
+- organizację i ISP
+- kod kraju
+- serwery i typy serwerów
+- wykryte podatności
+- domeny SSL
+
+### Szczegóły rekordu
+
+Po dwukrotnym kliknięciu w wiersz tabeli wyświetlane jest okno dialogowe ze szczegółami hosta które mogą być słąbo widoczne w graficznym wyglądzie bazy danych, zawierające m.in.:
+
+- IP
+- porty
+- serwery
+- typy serwera
+- podatności
+- domeny SSL
+
+---
+
 ## Technologie
 
 - Python 3.x
@@ -61,15 +111,11 @@ git clone https://github.com/wiktoria-kania/shodan-parser.git
 cd shodan-parser
 ```
 
----
-
 ### 2. Utwórz środowisko
 
 ```bash
 python -m venv .venv
 ```
-
----
 
 ### 3. Zainstaluj wymagania
 
@@ -91,10 +137,37 @@ API_KEY = "TWOJ_KLUCZ_API"
 
 ## Uruchomienie
 
-### Uruchomienie aplikacji GUI:
+Aplikacja jest uruchamiana za pomocą pliku gui.py.
 
 ```bash
 python gui.py
+```
+
+---
+
+## Struktura projektu
+
+```bash
+shodan-parser/
+│
+├── gui.py             
+├── main.py              
+│
+├── src/
+│   ├── database.py         
+│   ├── file_handler.py        
+│   ├── parser.py    
+│   ├── result_writer.py     
+│   └── shodan_client.py       
+│
+├── input/
+│   └── ips.txt          
+│
+├── output/
+│   ├── results.txt      
+│   └── shodan_results.db      
+│
+└── requirements.txt
 ```
 
 ---
