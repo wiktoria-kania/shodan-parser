@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from main import scan_ips
+from main import check_files
 import subprocess
 from src.database import load_data_to_tree
 
@@ -10,6 +11,9 @@ def open_file(filepath):
     subprocess.Popen(["notepad.exe", filepath])
     
 def run_gui():
+
+    check_files();
+    
     root = tk.Tk()
 
     root.title("Shodan parser")
@@ -93,6 +97,5 @@ def run_gui():
     tree.bind("<Double-1>", on_row_click)
 
     root.mainloop()
-
 
 run_gui()
