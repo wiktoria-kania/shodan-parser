@@ -181,3 +181,11 @@ Plik input/ips.txt powinien zawierać adresy IP sformatowane w taki sposób:
 1.1.1.1
 ...
 ```
+
+---
+
+## Ograniczenia
+
+Funkcja otwierania plików wejściowych i wynikowych z poziomu interfejsu graficznego wykorzystuje program Notatnik (notepad.exe) i jest dostępna wyłącznie w systemie Windows.
+
+Pozostałe funkcjonalności aplikacji, takie jak komunikacja z API Shodan, analiza danych, zapis wyników do pliku oraz obsługa bazy danych SQLite, są niezależne od systemu operacyjnego i mogą działać również na innych platformach obsługujących Python.
